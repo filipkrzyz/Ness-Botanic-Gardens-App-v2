@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kSI-cz-W8u">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,23 +10,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Trails View Controller-->
+        <!--Trails-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TrailsViewController" customModule="Ness_Botanic_Gardens_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YOt-8u-tM1">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trailCell" id="RwN-63-12O">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RwN-63-12O" id="S0C-PE-Zv9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -49,7 +49,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FrJ-qQ-BOc"/>
+                    <navigationItem key="navigationItem" title="Trails" id="FrJ-qQ-BOc"/>
                     <connections>
                         <outlet property="tableView" destination="YOt-8u-tM1" id="eUf-nF-Rfs"/>
                     </connections>
@@ -63,11 +63,11 @@
             <objects>
                 <viewController id="89B-2d-Jdr" customClass="TrailVC" customModule="Ness_Botanic_Gardens_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0KB-6h-PPR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBm-Dg-GuN">
-                                <rect key="frame" x="243" y="761" width="151" height="36"/>
+                                <rect key="frame" x="153" y="467" width="151" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Show on the map"/>
                                 <connections>
@@ -75,7 +75,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwa-fP-1cj">
-                                <rect key="frame" x="20" y="104" width="374" height="30"/>
+                                <rect key="frame" x="16" y="80" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -117,14 +117,14 @@
             <objects>
                 <viewController id="9pQ-J7-UnN" customClass="PointVC" customModule="Ness_Botanic_Gardens_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lAX-Wq-Mh3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QbO-Sn-FBR">
-                                <rect key="frame" x="16" y="64" width="382" height="554"/>
+                                <rect key="frame" x="16" y="64" width="288" height="554"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wWl-EB-5tT">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="554"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="554"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -159,7 +159,7 @@
             <objects>
                 <viewController id="G01-Lc-y7v" customClass="TrailMapVC" customModule="Ness_Botanic_Gardens_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ywx-cF-4NZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="S4C-gF-tF6"/>
@@ -168,6 +168,7 @@
                         <segue destination="leR-Vz-toy" kind="show" identifier="bedSegue" id="umG-ve-D9Z"/>
                         <segue destination="2gs-C9-lA3" kind="show" identifier="sectionSegue" id="K2E-s9-ued"/>
                         <segue destination="9pQ-J7-UnN" kind="show" identifier="pointSegue" id="WRs-s0-nQb"/>
+                        <segue destination="eTZ-a7-xbc" kind="show" identifier="attractionSegue" id="TSM-wC-pTj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yvT-LQ-aTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -179,16 +180,16 @@
             <objects>
                 <viewController id="nSb-Ch-O6h" customClass="MapViewController" customModule="Ness_Botanic_Gardens_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IfK-Qe-Oin">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Zfs-D4-3Nt"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TS0-c3-9xv"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="TS0-c3-9xv"/>
                     <connections>
                         <segue destination="2gs-C9-lA3" kind="show" identifier="sectionSegue" id="DkT-xX-iFW"/>
                         <segue destination="leR-Vz-toy" kind="show" identifier="bedSegue" id="g1h-SZ-f71"/>
-                        <segue destination="eTZ-a7-xbc" kind="show" identifier="attractionSegue2" id="o7r-e9-Mav"/>
+                        <segue destination="eTZ-a7-xbc" kind="show" identifier="attractionSegue" id="o7r-e9-Mav"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5R-09-4wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,14 +201,14 @@
             <objects>
                 <viewController id="eTZ-a7-xbc" customClass="AttractionVC" customModule="Ness_Botanic_Gardens_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o3E-sl-VCs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3tz-og-PEx">
-                                <rect key="frame" x="16" y="20" width="382" height="647"/>
+                                <rect key="frame" x="16" y="20" width="288" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ONu-iA-7wU">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="647"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="647"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -243,14 +244,14 @@
             <objects>
                 <viewController id="2gs-C9-lA3" customClass="SectionViewController" customModule="Ness_Botanic_Gardens_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kup-0b-9G0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QBk-BZ-3Hv">
-                                <rect key="frame" x="16" y="64" width="382" height="554"/>
+                                <rect key="frame" x="16" y="64" width="288" height="554"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ume-1o-Yxo">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="554"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="554"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -285,18 +286,18 @@
             <objects>
                 <viewController id="leR-Vz-toy" customClass="BedViewController" customModule="Ness_Botanic_Gardens_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HmV-eL-C9F">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mmK-3m-xkI">
-                                <rect key="frame" x="0.0" y="142.5" width="414" height="670.5"/>
+                                <rect key="frame" x="0.0" y="118.5" width="320" height="400.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bedCell" id="iyv-7G-yCO">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iyv-7G-yCO" id="gSV-VI-CKX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration" identifier="bedCell"/>
@@ -311,7 +312,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plants you can find here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYZ-FC-bBd">
-                                <rect key="frame" x="20" y="104" width="374" height="26.5"/>
+                                <rect key="frame" x="16" y="80" width="288" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.011764705882352941" green="0.12156862745098039" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -342,14 +343,14 @@
             <objects>
                 <viewController id="M7I-YP-zSs" customClass="PlantVC" customModule="Ness_Botanic_Gardens_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Lf-Gm-OXd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24A-e9-opQ">
-                                <rect key="frame" x="16" y="88" width="382" height="554"/>
+                                <rect key="frame" x="16" y="88" width="288" height="554"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hWH-gj-yL6">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="554"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="554"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -384,23 +385,21 @@
             <objects>
                 <viewController title="Home" id="IFC-Mz-FW6" customClass="HomeViewController" customModule="Ness_Botanic_Gardens_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zps-X4-208">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1j-rP-zcY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysg-LK-kmg">
-                                        <rect key="frame" x="353" y="6" width="53" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysg-LK-kmg">
+                                        <rect key="frame" x="259" y="0.0" width="53" height="30"/>
                                         <state key="normal" title="Refresh"/>
                                         <connections>
                                             <action selector="refreshButtonTapped:" destination="IFC-Mz-FW6" eventType="touchUpInside" id="1sg-It-iqr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="489-Wo-d8U">
-                                        <rect key="frame" x="8" y="6" width="34" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="489-Wo-d8U">
+                                        <rect key="frame" x="8" y="0.0" width="34" height="30"/>
                                         <state key="normal" title="Back"/>
                                         <connections>
                                             <action selector="backButtonTapped:" destination="IFC-Mz-FW6" eventType="touchUpInside" id="ZED-OV-hz2"/>
@@ -409,14 +408,18 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="HxK-jD-eEx"/>
+                                    <constraint firstItem="489-Wo-d8U" firstAttribute="centerY" secondItem="H1j-rP-zcY" secondAttribute="centerY" id="3oI-Vq-XUD"/>
+                                    <constraint firstItem="Ysg-LK-kmg" firstAttribute="centerY" secondItem="H1j-rP-zcY" secondAttribute="centerY" id="4SC-2q-ouJ"/>
+                                    <constraint firstItem="Ysg-LK-kmg" firstAttribute="trailing" secondItem="H1j-rP-zcY" secondAttribute="trailing" constant="-8" id="4hQ-jc-mjD"/>
+                                    <constraint firstAttribute="height" constant="30" id="HxK-jD-eEx"/>
+                                    <constraint firstItem="489-Wo-d8U" firstAttribute="leading" secondItem="H1j-rP-zcY" secondAttribute="leading" constant="8" id="LBo-wd-CF0"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="H1j-rP-zcY" firstAttribute="leading" secondItem="Sa6-xe-eHM" secondAttribute="leading" id="1Ja-Hk-Guu"/>
-                            <constraint firstItem="H1j-rP-zcY" firstAttribute="top" secondItem="Sa6-xe-eHM" secondAttribute="top" id="WBe-EW-Bc9"/>
+                            <constraint firstItem="H1j-rP-zcY" firstAttribute="top" secondItem="zps-X4-208" secondAttribute="topMargin" id="WBe-EW-Bc9"/>
                             <constraint firstItem="H1j-rP-zcY" firstAttribute="trailing" secondItem="Sa6-xe-eHM" secondAttribute="trailing" id="e7z-WV-PVC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sa6-xe-eHM"/>
@@ -455,30 +458,30 @@
             <objects>
                 <viewController id="kSI-cz-W8u" customClass="LoadingViewController" customModule="Ness_Botanic_Gardens_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3bI-lF-Bp2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UoL_Logo_CMYK" translatesAutoresizingMaskIntoConstraints="NO" id="gYC-Kd-Odf">
-                                <rect key="frame" x="35.5" y="69" width="343" height="88"/>
+                                <rect key="frame" x="-11.5" y="45" width="343" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="28P-pn-TM7"/>
                                     <constraint firstAttribute="height" constant="88.200000000000003" id="W1U-Zg-hC2"/>
                                 </constraints>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ghs-3l-5Ix">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updating data, please wait..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxc-Oy-KWS">
-                                <rect key="frame" x="84" y="471" width="246" height="24"/>
+                                <rect key="frame" x="37" y="307" width="246" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ui-nJ-9yq">
-                                <rect key="frame" x="87" y="157" width="240" height="281"/>
+                                <rect key="frame" x="87" y="133" width="240" height="141"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="NessLogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="7TX-8D-9h1">
-                                        <rect key="frame" x="14" y="70.5" width="225.5" height="140"/>
+                                        <rect key="frame" x="14" y="0.5" width="225.5" height="140"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="225.5" id="5nQ-Cd-iSL"/>
                                             <constraint firstAttribute="height" constant="140" id="ig0-SU-Nal"/>
@@ -522,7 +525,7 @@
                     <tabBarItem key="tabBarItem" title="Map" image="map" id="Iqv-e6-Udw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Kl-t6-l17">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -541,7 +544,7 @@
                     <tabBarItem key="tabBarItem" title="Trails" image="trails" id="JVj-Jp-Xvb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ONL-M2-u1b">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -562,7 +565,8 @@
         <image name="trails" width="37.5" height="37.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="umG-ve-D9Z"/>
-        <segue reference="K2E-s9-ued"/>
+        <segue reference="g1h-SZ-f71"/>
+        <segue reference="DkT-xX-iFW"/>
+        <segue reference="o7r-e9-Mav"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -31,7 +31,7 @@ class HomeViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         view.addSubview(webView)
         webView.allowsBackForwardNavigationGestures = true
         webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.topAnchor.constraint(equalTo: view.topAnchor, constant: 84).isActive = true
+        webView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 30).isActive = true
         webView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         webView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         webView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true

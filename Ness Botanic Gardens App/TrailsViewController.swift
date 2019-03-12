@@ -25,11 +25,18 @@ class TrailsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         retrieveTrails {
             DispatchQueue.main.async {  [unowned self] in
+                
+                self.navigationController?.navigationBar.titleTextAttributes = header1
+                
                 self.tableView.reloadData()
+                
+                
             }
         }
         
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "trailSegue" {
@@ -40,6 +47,7 @@ class TrailsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedTrail = self.trailsList[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "trailSegue", sender: self)
     }
 

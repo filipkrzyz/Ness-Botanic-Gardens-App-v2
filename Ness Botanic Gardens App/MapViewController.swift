@@ -10,7 +10,7 @@ import UIKit
 import GoogleMaps
 import CoreData
 
-class MapViewController: UIViewController, GMSMapViewDelegate {
+class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
 
     // Referencing AppDelegate because it has some functions neccessary for using Core Data
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -23,22 +23,33 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     var mapView = GMSMapView()
     var camera = GMSCameraPosition()
+    var locationManager = CLLocationManager()
     
     var nextMarkerID: Int = 0  // markerID
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Location Manager code to fetch current location
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        
+        
         // Create camera looking at Ness Gardens - later should be changed to current location
         self.camera = GMSCameraPosition.camera(withLatitude: 53.272522, longitude: -3.042988, zoom: 15.0)
         self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        
         // Seting compass graphic and myLocationButton which appears on the map
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
         mapView.settings.tiltGestures = false
-        //mapView.mapType = GMSMapViewType.hybrid
         mapView.delegate = self
+        mapView.isMyLocationEnabled = true
         view = mapView
+        
+        
         
         ////// Setting up Ness Gardens map image ground overlay
         let southWest = CLLocationCoordinate2D(latitude: 53.26862390, longitude: -3.05009044)
@@ -63,10 +74,40 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             }
         }
         
-        
+        let nessButton = UIButton(type: .custom)
+        nessButton.frame = CGRect(x: 50, y: 100, width: 56, height: 56)
+        nessButton.layer.cornerRadius = 0.5 * nessButton.bounds.size.width
+        nessButton.backgroundColor = graphiteGrey
+        nessButton.layer.shadowColor = graphiteGrey.cgColor
+        nessButton.layer.shadowOpacity = 0.5
+        nessButton.layer.shadowRadius = 30
+        nessButton.layer.shadowOffset = CGSize(width: 0, height: 10)
+        nessButton.clipsToBounds = true
+        nessButton.setImage(UIImage(named:"NessLogoCircle.png"), for: .normal)
+//        nessButton.addTarget(self, action: #selector(nessButtonPressed), for: .touchUpInside)
+//        nessButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(nessButton)
+//        nessButton.bottomAnchor.constraint(equalTo: mapView.bottomAnchor, constant: -20)
         
     }   // <-- viewDidLoad()
     
+    @objc func nessButtonPressed() {
+        print("ness button pressed")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
@@ -78,7 +119,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         // userData holds all the information about the marker
         self.selectedMarker = marker.userData as? Marker
         if self.selectedMarker!.entityName! == "Attractions" {
-            performSegue(withIdentifier: "attractionSegue2", sender: self)
+            performSegue(withIdentifier: "attractionSegue", sender: self)
         } else if self.selectedMarker!.entityName! == "Beds" {
             performSegue(withIdentifier: "bedSegue", sender: self)
         } else if self.selectedMarker!.entityName! == "Garden_sections" {
@@ -88,7 +129,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "attractionSegue2" {
+        if segue.identifier == "attractionSegue" {
             guard let attractionVC = segue.destination as? AttractionVC else { return  }
             attractionVC.entityName = self.selectedMarker!.entityName!
             attractionVC.idProperty = self.selectedMarker!.idProperty!
