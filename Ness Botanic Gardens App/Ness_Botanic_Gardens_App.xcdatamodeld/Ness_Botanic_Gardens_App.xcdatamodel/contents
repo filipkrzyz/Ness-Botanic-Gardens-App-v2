@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Attractions" representedClassName=".Attractions" syncable="YES">
+        <attribute name="attraction_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enabled" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_update" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="more_info_link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="symbol_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Beds" representedClassName=".Beds" syncable="YES">
+        <attribute name="bed_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enabled" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_update" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="section_name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Conifer_data" representedClassName=".Conifer_data" syncable="YES">
+        <attribute name="bark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commonName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distribution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evergreenDeciduous" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="family" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="femaleFlowers" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="finalHeight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fruitShape" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fruitSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fruitType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="growthForm" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="growthHabit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_update" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafArrangement" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafShape" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leafSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maleFlowers" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="monoeciousDioecious" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notableLocation" optional="YES" attributeType="Transformable" customClassName="[String]" syncable="YES"/>
+        <attribute name="notablePlantsAtNess" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notesOnGenus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="otherFruitCharacteristics" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="plantID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="plantImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="plantImageSmall" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scientificName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Features" representedClassName=".Features" syncable="YES">
+        <attribute name="enabled" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_update" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Garden_sections" representedClassName=".Garden_sections" syncable="YES">
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enabled" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_name1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_name2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_name3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_name4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_name5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_update" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Images" representedClassName=".Images" syncable="YES">
+        <attribute name="enabled" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="img_file_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_update" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recnum" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Itf2" representedClassName=".Itf2" syncable="YES">
+        <attribute name="accsta" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="alt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bed" optional="YES" attributeType="String" customClassName="[String]" syncable="YES"/>
+        <attribute name="cou" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enabled" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fam" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_update" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latdeg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latdir" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latmin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latsec" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="londeg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="londir" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lonmin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lonsec" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recnum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sgu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vernam" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Ness_spec" representedClassName=".Ness_spec" syncable="YES">
+        <attribute name="agg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clav" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ctbk" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="drog" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gfth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ggg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gglo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ggrs" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="glar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="glund" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gmltc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gpurb" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gscet" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gsea" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gswr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gvar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gyel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hard" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heart" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hevs" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="infr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leaf" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lfespn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="light" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moist" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mszh" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mszw" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pol" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="r2col" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rcol" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recnum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rfm" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rsea" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sand" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="snk" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="solph" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urban" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vth1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vth5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vth10" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vth20" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="w2col" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="water" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wcol" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wfm" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wind" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wscet" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wsea" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wsz" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Trail_locations" representedClassName=".Trail_locations" syncable="YES">
+        <attribute name="enabled" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_update" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sequence_no" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trail_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Trail_points" representedClassName=".Trail_points" syncable="YES">
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enabled" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_name1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_name2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_name3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_name4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image_name5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_update" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trail_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Trails" representedClassName=".Trails" syncable="YES">
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="difficulty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enabled" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_update" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trail_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Attractions" positionX="-18" positionY="162" width="128" height="195"/>
+        <element name="Beds" positionX="-9" positionY="135" width="128" height="150"/>
+        <element name="Conifer_data" positionX="0" positionY="144" width="128" height="465"/>
+        <element name="Features" positionX="0" positionY="171" width="128" height="150"/>
+        <element name="Garden_sections" positionX="18" positionY="180" width="128" height="225"/>
+        <element name="Images" positionX="36" positionY="189" width="128" height="105"/>
+        <element name="Itf2" positionX="18" positionY="162" width="128" height="360"/>
+        <element name="Ness_spec" positionX="9" positionY="153" width="128" height="810"/>
+        <element name="Trail_locations" positionX="-54" positionY="63" width="128" height="165"/>
+        <element name="Trail_points" positionX="-36" positionY="108" width="128" height="255"/>
+        <element name="Trails" positionX="-63" positionY="-18" width="128" height="180"/>
+    </elements>
+</model>

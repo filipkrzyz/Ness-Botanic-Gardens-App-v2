@@ -1,0 +1,6 @@
+framework module Pods_Ness_Botanic_Gardens_App {
+  umbrella header "Pods-Ness Botanic Gardens App-umbrella.h"
+
+  export *
+  module * { export * }
+}

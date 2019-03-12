@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC2A3A572220C20F00B417F6 /* PlantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2A3A562220C20F00B417F6 /* PlantVC.swift */; };
+		DC5D61AB22331739001D196F /* Ness.html in Resources */ = {isa = PBXBuildFile; fileRef = DC5D61A922331738001D196F /* Ness.html */; };
+		DC5D61AC22331739001D196F /* Ness Botanic Gardens - University of Liverpool_files in Resources */ = {isa = PBXBuildFile; fileRef = DC5D61AA22331739001D196F /* Ness Botanic Gardens - University of Liverpool_files */; };
+		DC5D61AE22345857001D196F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5D61AD22345856001D196F /* Assets.xcassets */; };
+		DC61126D21DD48E500BED039 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61126C21DD48E500BED039 /* AppDelegate.swift */; };
+		DC61126F21DD48E500BED039 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61126E21DD48E500BED039 /* ViewController.swift */; };
+		DC61127221DD48E500BED039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC61127021DD48E500BED039 /* Main.storyboard */; };
+		DC61127521DD48E500BED039 /* Ness_Botanic_Gardens_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC61127321DD48E500BED039 /* Ness_Botanic_Gardens_App.xcdatamodeld */; };
+		DC61127A21DD48E800BED039 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC61127821DD48E800BED039 /* LaunchScreen.storyboard */; };
+		DC61128421DD614200BED039 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61128321DD614200BED039 /* MapViewController.swift */; };
+		DC62D81B220F0334008F4D1B /* Beds+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62D819220F0334008F4D1B /* Beds+CoreDataClass.swift */; };
+		DC62D81C220F0334008F4D1B /* Beds+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62D81A220F0334008F4D1B /* Beds+CoreDataProperties.swift */; };
+		DC62D81E22132DD4008F4D1B /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62D81D22132DD4008F4D1B /* LoadingViewController.swift */; };
+		DC62D82222133601008F4D1B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62D82122133601008F4D1B /* Constant.swift */; };
+		DC62D8242218A860008F4D1B /* CustomMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62D8232218A860008F4D1B /* CustomMarker.swift */; };
+		DC62D828221AE4CA008F4D1B /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62D827221AE4CA008F4D1B /* SectionViewController.swift */; };
+		DC62D82A221AE51D008F4D1B /* BedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62D829221AE51D008F4D1B /* BedViewController.swift */; };
+		DC62D82C221B4BD1008F4D1B /* TrailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62D82B221B4BD1008F4D1B /* TrailsViewController.swift */; };
+		DC8057D7220A50D10074D23B /* Trails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057C1220A50D10074D23B /* Trails+CoreDataClass.swift */; };
+		DC8057D8220A50D10074D23B /* Trails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057C2220A50D10074D23B /* Trails+CoreDataProperties.swift */; };
+		DC8057D9220A50D10074D23B /* Conifer_data+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057C3220A50D10074D23B /* Conifer_data+CoreDataClass.swift */; };
+		DC8057DA220A50D10074D23B /* Conifer_data+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057C4220A50D10074D23B /* Conifer_data+CoreDataProperties.swift */; };
+		DC8057DB220A50D10074D23B /* Images+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057C5220A50D10074D23B /* Images+CoreDataClass.swift */; };
+		DC8057DC220A50D10074D23B /* Images+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057C6220A50D10074D23B /* Images+CoreDataProperties.swift */; };
+		DC8057DD220A50D10074D23B /* Itf2+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057C7220A50D10074D23B /* Itf2+CoreDataClass.swift */; };
+		DC8057DE220A50D10074D23B /* Itf2+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057C8220A50D10074D23B /* Itf2+CoreDataProperties.swift */; };
+		DC8057DF220A50D10074D23B /* Garden_sections+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057C9220A50D10074D23B /* Garden_sections+CoreDataClass.swift */; };
+		DC8057E0220A50D10074D23B /* Garden_sections+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057CA220A50D10074D23B /* Garden_sections+CoreDataProperties.swift */; };
+		DC8057E1220A50D10074D23B /* Attractions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057CB220A50D10074D23B /* Attractions+CoreDataClass.swift */; };
+		DC8057E2220A50D10074D23B /* Attractions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057CC220A50D10074D23B /* Attractions+CoreDataProperties.swift */; };
+		DC8057E3220A50D10074D23B /* Trail_locations+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057CD220A50D10074D23B /* Trail_locations+CoreDataClass.swift */; };
+		DC8057E4220A50D10074D23B /* Trail_locations+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057CE220A50D10074D23B /* Trail_locations+CoreDataProperties.swift */; };
+		DC8057E5220A50D10074D23B /* Features+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057CF220A50D10074D23B /* Features+CoreDataClass.swift */; };
+		DC8057E6220A50D10074D23B /* Features+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057D0220A50D10074D23B /* Features+CoreDataProperties.swift */; };
+		DC8057E9220A50D10074D23B /* Trail_points+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057D3220A50D10074D23B /* Trail_points+CoreDataClass.swift */; };
+		DC8057EA220A50D10074D23B /* Trail_points+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057D4220A50D10074D23B /* Trail_points+CoreDataProperties.swift */; };
+		DC8057EB220A50D10074D23B /* Ness_spec+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057D5220A50D10074D23B /* Ness_spec+CoreDataClass.swift */; };
+		DC8057EC220A50D10074D23B /* Ness_spec+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057D6220A50D10074D23B /* Ness_spec+CoreDataProperties.swift */; };
+		DC8057EE220A575B0074D23B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8057ED220A575B0074D23B /* HomeViewController.swift */; };
+		DCE024312221B5040024DBCF /* TrailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE024302221B5040024DBCF /* TrailVC.swift */; };
+		DCE024332221B5290024DBCF /* TrailMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE024322221B5290024DBCF /* TrailMapVC.swift */; };
+		DCE024352222D3FA0024DBCF /* PointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE024342222D3FA0024DBCF /* PointVC.swift */; };
+		DCE02439222F22510024DBCF /* AttractionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE02438222F22510024DBCF /* AttractionVC.swift */; };
+		DCE491902230312C0054B2A9 /* nessdb_20190306.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE4918F2230312C0054B2A9 /* nessdb_20190306.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		51C2063571B65DB11C3DC1C7 /* Pods-Ness Botanic Gardens App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ness Botanic Gardens App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ness Botanic Gardens App/Pods-Ness Botanic Gardens App.debug.xcconfig"; sourceTree = "<group>"; };
+		B8262CC648ABCF492EDA4228 /* Pods-Ness Botanic Gardens App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ness Botanic Gardens App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ness Botanic Gardens App/Pods-Ness Botanic Gardens App.release.xcconfig"; sourceTree = "<group>"; };
+		DC2A3A562220C20F00B417F6 /* PlantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantVC.swift; sourceTree = "<group>"; };
+		DC5D61A922331738001D196F /* Ness.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Ness.html; sourceTree = "<group>"; };
+		DC5D61AA22331739001D196F /* Ness Botanic Gardens - University of Liverpool_files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Ness Botanic Gardens - University of Liverpool_files"; sourceTree = "<group>"; };
+		DC5D61AD22345856001D196F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC61126921DD48E500BED039 /* Ness Botanic Gardens App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ness Botanic Gardens App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC61126C21DD48E500BED039 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC61126E21DD48E500BED039 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC61127121DD48E500BED039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC61127421DD48E500BED039 /* Ness_Botanic_Gardens_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ness_Botanic_Gardens_App.xcdatamodel; sourceTree = "<group>"; };
+		DC61127921DD48E800BED039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC61127B21DD48E800BED039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC61128321DD614200BED039 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DC62D819220F0334008F4D1B /* Beds+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Beds+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DC62D81A220F0334008F4D1B /* Beds+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Beds+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC62D81D22132DD4008F4D1B /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		DC62D82122133601008F4D1B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		DC62D8232218A860008F4D1B /* CustomMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarker.swift; sourceTree = "<group>"; };
+		DC62D827221AE4CA008F4D1B /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
+		DC62D829221AE51D008F4D1B /* BedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedViewController.swift; sourceTree = "<group>"; };
+		DC62D82B221B4BD1008F4D1B /* TrailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailsViewController.swift; sourceTree = "<group>"; };
+		DC8057C1220A50D10074D23B /* Trails+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trails+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DC8057C2220A50D10074D23B /* Trails+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trails+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC8057C3220A50D10074D23B /* Conifer_data+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Conifer_data+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DC8057C4220A50D10074D23B /* Conifer_data+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Conifer_data+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC8057C5220A50D10074D23B /* Images+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Images+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DC8057C6220A50D10074D23B /* Images+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Images+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC8057C7220A50D10074D23B /* Itf2+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Itf2+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DC8057C8220A50D10074D23B /* Itf2+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Itf2+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC8057C9220A50D10074D23B /* Garden_sections+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Garden_sections+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DC8057CA220A50D10074D23B /* Garden_sections+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Garden_sections+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC8057CB220A50D10074D23B /* Attractions+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Attractions+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DC8057CC220A50D10074D23B /* Attractions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Attractions+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC8057CD220A50D10074D23B /* Trail_locations+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trail_locations+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DC8057CE220A50D10074D23B /* Trail_locations+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trail_locations+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC8057CF220A50D10074D23B /* Features+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Features+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DC8057D0220A50D10074D23B /* Features+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Features+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC8057D3220A50D10074D23B /* Trail_points+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trail_points+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DC8057D4220A50D10074D23B /* Trail_points+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trail_points+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC8057D5220A50D10074D23B /* Ness_spec+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ness_spec+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DC8057D6220A50D10074D23B /* Ness_spec+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ness_spec+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC8057ED220A575B0074D23B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DCE024302221B5040024DBCF /* TrailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailVC.swift; sourceTree = "<group>"; };
+		DCE024322221B5290024DBCF /* TrailMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailMapVC.swift; sourceTree = "<group>"; };
+		DCE024342222D3FA0024DBCF /* PointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointVC.swift; sourceTree = "<group>"; };
+		DCE02438222F22510024DBCF /* AttractionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionVC.swift; sourceTree = "<group>"; };
+		DCE4918F2230312C0054B2A9 /* nessdb_20190306.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nessdb_20190306.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC61126621DD48E500BED039 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF4D11C7230C3AA1BB2E8087 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51C2063571B65DB11C3DC1C7 /* Pods-Ness Botanic Gardens App.debug.xcconfig */,
+				B8262CC648ABCF492EDA4228 /* Pods-Ness Botanic Gardens App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC61126021DD48E500BED039 = {
+			isa = PBXGroup;
+			children = (
+				DC8057CB220A50D10074D23B /* Attractions+CoreDataClass.swift */,
+				DC8057CC220A50D10074D23B /* Attractions+CoreDataProperties.swift */,
+				DC62D819220F0334008F4D1B /* Beds+CoreDataClass.swift */,
+				DC62D81A220F0334008F4D1B /* Beds+CoreDataProperties.swift */,
+				DC8057C3220A50D10074D23B /* Conifer_data+CoreDataClass.swift */,
+				DC8057C4220A50D10074D23B /* Conifer_data+CoreDataProperties.swift */,
+				DC8057CF220A50D10074D23B /* Features+CoreDataClass.swift */,
+				DC8057D0220A50D10074D23B /* Features+CoreDataProperties.swift */,
+				DC8057C9220A50D10074D23B /* Garden_sections+CoreDataClass.swift */,
+				DC8057CA220A50D10074D23B /* Garden_sections+CoreDataProperties.swift */,
+				DC8057C5220A50D10074D23B /* Images+CoreDataClass.swift */,
+				DC8057C6220A50D10074D23B /* Images+CoreDataProperties.swift */,
+				DC8057C7220A50D10074D23B /* Itf2+CoreDataClass.swift */,
+				DC8057C8220A50D10074D23B /* Itf2+CoreDataProperties.swift */,
+				DC8057D5220A50D10074D23B /* Ness_spec+CoreDataClass.swift */,
+				DC8057D6220A50D10074D23B /* Ness_spec+CoreDataProperties.swift */,
+				DC8057C1220A50D10074D23B /* Trails+CoreDataClass.swift */,
+				DC8057C2220A50D10074D23B /* Trails+CoreDataProperties.swift */,
+				DC8057D3220A50D10074D23B /* Trail_points+CoreDataClass.swift */,
+				DC8057D4220A50D10074D23B /* Trail_points+CoreDataProperties.swift */,
+				DC8057CD220A50D10074D23B /* Trail_locations+CoreDataClass.swift */,
+				DC8057CE220A50D10074D23B /* Trail_locations+CoreDataProperties.swift */,
+				DC8057EF220A5B2C0074D23B /* Entities */,
+				DC61126B21DD48E500BED039 /* Ness Botanic Gardens App */,
+				DC61126A21DD48E500BED039 /* Products */,
+				AF4D11C7230C3AA1BB2E8087 /* Pods */,
+				F38A15EB42E30288D91CC415 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DC61126A21DD48E500BED039 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC61126921DD48E500BED039 /* Ness Botanic Gardens App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC61126B21DD48E500BED039 /* Ness Botanic Gardens App */ = {
+			isa = PBXGroup;
+			children = (
+				DC5D61AD22345856001D196F /* Assets.xcassets */,
+				DC61126C21DD48E500BED039 /* AppDelegate.swift */,
+				DC61127021DD48E500BED039 /* Main.storyboard */,
+				DC62D82122133601008F4D1B /* Constant.swift */,
+				DC62D81D22132DD4008F4D1B /* LoadingViewController.swift */,
+				DC8057ED220A575B0074D23B /* HomeViewController.swift */,
+				DC61128321DD614200BED039 /* MapViewController.swift */,
+				DC62D827221AE4CA008F4D1B /* SectionViewController.swift */,
+				DCE02438222F22510024DBCF /* AttractionVC.swift */,
+				DC62D829221AE51D008F4D1B /* BedViewController.swift */,
+				DC2A3A562220C20F00B417F6 /* PlantVC.swift */,
+				DC62D8232218A860008F4D1B /* CustomMarker.swift */,
+				DC62D82B221B4BD1008F4D1B /* TrailsViewController.swift */,
+				DCE024302221B5040024DBCF /* TrailVC.swift */,
+				DCE024322221B5290024DBCF /* TrailMapVC.swift */,
+				DCE024342222D3FA0024DBCF /* PointVC.swift */,
+				DC61127821DD48E800BED039 /* LaunchScreen.storyboard */,
+				DC61127B21DD48E800BED039 /* Info.plist */,
+				DC61127321DD48E500BED039 /* Ness_Botanic_Gardens_App.xcdatamodeld */,
+				DC61126E21DD48E500BED039 /* ViewController.swift */,
+				DCE4918F2230312C0054B2A9 /* nessdb_20190306.json */,
+				DC5D61AA22331739001D196F /* Ness Botanic Gardens - University of Liverpool_files */,
+				DC5D61A922331738001D196F /* Ness.html */,
+			);
+			path = "Ness Botanic Gardens App";
+			sourceTree = "<group>";
+		};
+		DC8057EF220A5B2C0074D23B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F38A15EB42E30288D91CC415 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC61126821DD48E500BED039 /* Ness Botanic Gardens App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC61127E21DD48E800BED039 /* Build configuration list for PBXNativeTarget "Ness Botanic Gardens App" */;
+			buildPhases = (
+				8E4D4369447B835888E72FD7 /* [CP] Check Pods Manifest.lock */,
+				DC61126521DD48E500BED039 /* Sources */,
+				DC61126621DD48E500BED039 /* Frameworks */,
+				DC61126721DD48E500BED039 /* Resources */,
+				0BF9E6D4F965FBD379FBD516 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ness Botanic Gardens App";
+			productName = "Ness Botanic Gardens App";
+			productReference = DC61126921DD48E500BED039 /* Ness Botanic Gardens App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC61126121DD48E500BED039 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Filip Krzyzanowski";
+				TargetAttributes = {
+					DC61126821DD48E500BED039 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = DC61126421DD48E500BED039 /* Build configuration list for PBXProject "Ness Botanic Gardens App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC61126021DD48E500BED039;
+			productRefGroup = DC61126A21DD48E500BED039 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC61126821DD48E500BED039 /* Ness Botanic Gardens App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC61126721DD48E500BED039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5D61AB22331739001D196F /* Ness.html in Resources */,
+				DC5D61AC22331739001D196F /* Ness Botanic Gardens - University of Liverpool_files in Resources */,
+				DC61127A21DD48E800BED039 /* LaunchScreen.storyboard in Resources */,
+				DC61127221DD48E500BED039 /* Main.storyboard in Resources */,
+				DC5D61AE22345857001D196F /* Assets.xcassets in Resources */,
+				DCE491902230312C0054B2A9 /* nessdb_20190306.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BF9E6D4F965FBD379FBD516 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Ness Botanic Gardens App/Pods-Ness Botanic Gardens App-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ness Botanic Gardens App/Pods-Ness Botanic Gardens App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E4D4369447B835888E72FD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ness Botanic Gardens App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC61126521DD48E500BED039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCE024332221B5290024DBCF /* TrailMapVC.swift in Sources */,
+				DC8057E2220A50D10074D23B /* Attractions+CoreDataProperties.swift in Sources */,
+				DC8057DD220A50D10074D23B /* Itf2+CoreDataClass.swift in Sources */,
+				DC8057DE220A50D10074D23B /* Itf2+CoreDataProperties.swift in Sources */,
+				DC62D82C221B4BD1008F4D1B /* TrailsViewController.swift in Sources */,
+				DC8057DF220A50D10074D23B /* Garden_sections+CoreDataClass.swift in Sources */,
+				DCE02439222F22510024DBCF /* AttractionVC.swift in Sources */,
+				DC62D81C220F0334008F4D1B /* Beds+CoreDataProperties.swift in Sources */,
+				DC8057E6220A50D10074D23B /* Features+CoreDataProperties.swift in Sources */,
+				DC8057DB220A50D10074D23B /* Images+CoreDataClass.swift in Sources */,
+				DC61126F21DD48E500BED039 /* ViewController.swift in Sources */,
+				DCE024312221B5040024DBCF /* TrailVC.swift in Sources */,
+				DC8057EB220A50D10074D23B /* Ness_spec+CoreDataClass.swift in Sources */,
+				DC8057DA220A50D10074D23B /* Conifer_data+CoreDataProperties.swift in Sources */,
+				DC62D828221AE4CA008F4D1B /* SectionViewController.swift in Sources */,
+				DC61126D21DD48E500BED039 /* AppDelegate.swift in Sources */,
+				DCE024352222D3FA0024DBCF /* PointVC.swift in Sources */,
+				DC61127521DD48E500BED039 /* Ness_Botanic_Gardens_App.xcdatamodeld in Sources */,
+				DC2A3A572220C20F00B417F6 /* PlantVC.swift in Sources */,
+				DC8057D9220A50D10074D23B /* Conifer_data+CoreDataClass.swift in Sources */,
+				DC8057EA220A50D10074D23B /* Trail_points+CoreDataProperties.swift in Sources */,
+				DC8057E1220A50D10074D23B /* Attractions+CoreDataClass.swift in Sources */,
+				DC62D81E22132DD4008F4D1B /* LoadingViewController.swift in Sources */,
+				DC62D82A221AE51D008F4D1B /* BedViewController.swift in Sources */,
+				DC62D82222133601008F4D1B /* Constant.swift in Sources */,
+				DC8057E9220A50D10074D23B /* Trail_points+CoreDataClass.swift in Sources */,
+				DC62D81B220F0334008F4D1B /* Beds+CoreDataClass.swift in Sources */,
+				DC8057E4220A50D10074D23B /* Trail_locations+CoreDataProperties.swift in Sources */,
+				DC8057DC220A50D10074D23B /* Images+CoreDataProperties.swift in Sources */,
+				DC8057EE220A575B0074D23B /* HomeViewController.swift in Sources */,
+				DC62D8242218A860008F4D1B /* CustomMarker.swift in Sources */,
+				DC8057E5220A50D10074D23B /* Features+CoreDataClass.swift in Sources */,
+				DC8057E3220A50D10074D23B /* Trail_locations+CoreDataClass.swift in Sources */,
+				DC8057D8220A50D10074D23B /* Trails+CoreDataProperties.swift in Sources */,
+				DC8057D7220A50D10074D23B /* Trails+CoreDataClass.swift in Sources */,
+				DC8057E0220A50D10074D23B /* Garden_sections+CoreDataProperties.swift in Sources */,
+				DC61128421DD614200BED039 /* MapViewController.swift in Sources */,
+				DC8057EC220A50D10074D23B /* Ness_spec+CoreDataProperties.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DC61127021DD48E500BED039 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC61127121DD48E500BED039 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC61127821DD48E800BED039 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC61127921DD48E800BED039 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC61127C21DD48E800BED039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC61127D21DD48E800BED039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC61127F21DD48E800BED039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C2063571B65DB11C3DC1C7 /* Pods-Ness Botanic Gardens App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3378LL69RZ;
+				INFOPLIST_FILE = "Ness Botanic Gardens App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.filipkrzyzanowski.Ness-Botanic-Gardens-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC61128021DD48E800BED039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8262CC648ABCF492EDA4228 /* Pods-Ness Botanic Gardens App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3378LL69RZ;
+				INFOPLIST_FILE = "Ness Botanic Gardens App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.filipkrzyzanowski.Ness-Botanic-Gardens-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC61126421DD48E500BED039 /* Build configuration list for PBXProject "Ness Botanic Gardens App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC61127C21DD48E800BED039 /* Debug */,
+				DC61127D21DD48E800BED039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC61127E21DD48E800BED039 /* Build configuration list for PBXNativeTarget "Ness Botanic Gardens App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC61127F21DD48E800BED039 /* Debug */,
+				DC61128021DD48E800BED039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC61127321DD48E500BED039 /* Ness_Botanic_Gardens_App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC61127421DD48E500BED039 /* Ness_Botanic_Gardens_App.xcdatamodel */,
+			);
+			currentVersion = DC61127421DD48E500BED039 /* Ness_Botanic_Gardens_App.xcdatamodel */;
+			path = Ness_Botanic_Gardens_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DC61126121DD48E500BED039 /* Project object */;
+}
