@@ -74,19 +74,19 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             }
         }
         
-        let nessButton = UIButton(type: .custom)
-        nessButton.frame = CGRect(x: 50, y: 100, width: 56, height: 56)
-        nessButton.layer.cornerRadius = 0.5 * nessButton.bounds.size.width
-        nessButton.backgroundColor = graphiteGrey
-        nessButton.layer.shadowColor = graphiteGrey.cgColor
-        nessButton.layer.shadowOpacity = 0.5
-        nessButton.layer.shadowRadius = 30
-        nessButton.layer.shadowOffset = CGSize(width: 0, height: 10)
-        nessButton.clipsToBounds = true
-        nessButton.setImage(UIImage(named:"NessLogoCircle.png"), for: .normal)
+//        let nessButton = UIButton(type: .custom)
+//        nessButton.frame = CGRect(x: 50, y: 100, width: 56, height: 56)
+//        nessButton.layer.cornerRadius = 0.5 * nessButton.bounds.size.width
+//        nessButton.backgroundColor = graphiteGrey
+//        nessButton.layer.shadowColor = graphiteGrey.cgColor
+//        nessButton.layer.shadowOpacity = 0.25
+//        nessButton.layer.shadowRadius = 30
+//        nessButton.layer.shadowOffset = CGSize(width: 0, height: -10)
+//        nessButton.clipsToBounds = true
+//        nessButton.setImage(UIImage(named:"NessLogoCircle.png"), for: .normal)
 //        nessButton.addTarget(self, action: #selector(nessButtonPressed), for: .touchUpInside)
 //        nessButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(nessButton)
+//        view.addSubview(nessButton)
 //        nessButton.bottomAnchor.constraint(equalTo: mapView.bottomAnchor, constant: -20)
         
     }   // <-- viewDidLoad()
