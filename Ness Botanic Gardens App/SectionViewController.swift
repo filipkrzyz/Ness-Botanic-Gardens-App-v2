@@ -65,6 +65,7 @@ class SectionViewController: UIViewController {
             descriptionView.sizeToFit()
             descriptionView.font = UIFont.systemFont(ofSize: 22)
             descriptionView.isScrollEnabled = false
+            descriptionView.isEditable = false
             
             stackView.addArrangedSubview(descriptionView)
             constraint = descriptionView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 16)

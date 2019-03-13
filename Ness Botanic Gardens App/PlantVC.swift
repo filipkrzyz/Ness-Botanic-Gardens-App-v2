@@ -53,6 +53,8 @@ class PlantVC: UIViewController {
                 descriptionView.sizeToFit()
                 descriptionView.font = UIFont.systemFont(ofSize: 22)
                 descriptionView.isScrollEnabled = false
+                descriptionView.isEditable = false
+
                 
                 
                 self!.stackView.addArrangedSubview(descriptionView)

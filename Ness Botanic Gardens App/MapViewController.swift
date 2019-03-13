@@ -27,6 +27,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     
     var nextMarkerID: Int = 0  // markerID
     
+    var nessButton = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +39,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         locationManager.startUpdatingLocation()
         
         
-        // Create camera looking at Ness Gardens - later should be changed to current location
+        // Create camera looking at Ness Gardens
         self.camera = GMSCameraPosition.camera(withLatitude: 53.272522, longitude: -3.042988, zoom: 15.0)
         self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         
@@ -74,25 +76,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             }
         }
         
-//        let nessButton = UIButton(type: .custom)
-//        nessButton.frame = CGRect(x: 50, y: 100, width: 56, height: 56)
-//        nessButton.layer.cornerRadius = 0.5 * nessButton.bounds.size.width
-//        nessButton.backgroundColor = graphiteGrey
-//        nessButton.layer.shadowColor = graphiteGrey.cgColor
-//        nessButton.layer.shadowOpacity = 0.25
-//        nessButton.layer.shadowRadius = 30
-//        nessButton.layer.shadowOffset = CGSize(width: 0, height: -10)
-//        nessButton.clipsToBounds = true
-//        nessButton.setImage(UIImage(named:"NessLogoCircle.png"), for: .normal)
-//        nessButton.addTarget(self, action: #selector(nessButtonPressed), for: .touchUpInside)
-//        nessButton.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(nessButton)
-//        nessButton.bottomAnchor.constraint(equalTo: mapView.bottomAnchor, constant: -20)
+        
+
         
     }   // <-- viewDidLoad()
     
     @objc func nessButtonPressed() {
         print("ness button pressed")
+        self.camera = GMSCameraPosition.camera(withLatitude: 53.272522, longitude: -3.042988, zoom: 15.0)
+        self.mapView.animate(to: self.camera)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,6 +92,33 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         
         // Hide the Navigation Bar
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        // NESS BUTTON
+        self.nessButton = UIButton(type: .custom)
+        self.nessButton.translatesAutoresizingMaskIntoConstraints = false
+        self.nessButton.backgroundColor = UIColor.white
+        self.nessButton.setImage(UIImage(named:"NessLogoCircle.png"), for: .normal)
+        self.nessButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
+        self.nessButton.addTarget(self, action: #selector(self.nessButtonPressed), for: .touchUpInside)
+        DispatchQueue.main.async {
+            if let keyWindow = UIApplication.shared.keyWindow {
+                keyWindow.addSubview(self.nessButton)
+                //self.nessButton.trailingAnchor.constraint(equalTo: self.nessButton.trailingAnchor, constant: 10).isActive = true
+                //self.nessButton.bottomAnchor.constraint(equalTo: self.nessButton.bottomAnchor, constant: 100).isActive = true
+                NSLayoutConstraint.activate([
+                    keyWindow.trailingAnchor.constraint(equalTo: self.nessButton.trailingAnchor, constant: 10),
+                    keyWindow.bottomAnchor.constraint(equalTo: self.nessButton.bottomAnchor, constant: 120),
+                    self.nessButton.widthAnchor.constraint(equalToConstant: 56),
+                    self.nessButton.heightAnchor.constraint(equalToConstant: 56)])
+            }
+            
+            self.nessButton.layer.cornerRadius = 30.0
+            self.nessButton.layer.shadowColor = graphiteGrey.cgColor
+            self.nessButton.layer.shadowOffset = CGSize(width: 0, height: 25)
+            self.nessButton.layer.shadowRadius = 30.0
+            self.nessButton.layer.shadowOpacity = 0.25
+            self.nessButton.clipsToBounds = true
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -107,6 +126,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         
         // Show the Navigation Bar
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        
+        if self.nessButton.superview != nil {
+            DispatchQueue.main.async {
+                self.nessButton.removeFromSuperview()
+                self.nessButton = UIButton()
+            }
+        }
     }
     
     
