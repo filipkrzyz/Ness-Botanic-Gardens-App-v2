@@ -51,10 +51,12 @@
 		DCE024352222D3FA0024DBCF /* PointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE024342222D3FA0024DBCF /* PointVC.swift */; };
 		DCE02439222F22510024DBCF /* AttractionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE02438222F22510024DBCF /* AttractionVC.swift */; };
 		DCE491902230312C0054B2A9 /* nessdb_20190306.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE4918F2230312C0054B2A9 /* nessdb_20190306.json */; };
+		FE23F17878974BF6E21428BD /* Pods_Ness_Botanic_Gardens_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A331AE91FF37CAB7C7168401 /* Pods_Ness_Botanic_Gardens_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		51C2063571B65DB11C3DC1C7 /* Pods-Ness Botanic Gardens App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ness Botanic Gardens App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ness Botanic Gardens App/Pods-Ness Botanic Gardens App.debug.xcconfig"; sourceTree = "<group>"; };
+		A331AE91FF37CAB7C7168401 /* Pods_Ness_Botanic_Gardens_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ness_Botanic_Gardens_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8262CC648ABCF492EDA4228 /* Pods-Ness Botanic Gardens App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ness Botanic Gardens App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ness Botanic Gardens App/Pods-Ness Botanic Gardens App.release.xcconfig"; sourceTree = "<group>"; };
 		DC2A3A562220C20F00B417F6 /* PlantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantVC.swift; sourceTree = "<group>"; };
 		DC5D61A922331738001D196F /* Ness.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Ness.html; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE23F17878974BF6E21428BD /* Pods_Ness_Botanic_Gardens_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +208,7 @@
 		F38A15EB42E30288D91CC415 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A331AE91FF37CAB7C7168401 /* Pods_Ness_Botanic_Gardens_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,6 +225,7 @@
 				DC61126621DD48E500BED039 /* Frameworks */,
 				DC61126721DD48E500BED039 /* Resources */,
 				0BF9E6D4F965FBD379FBD516 /* [CP] Copy Pods Resources */,
+				922145F2E6EA805EA27D107B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,6 +330,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		922145F2E6EA805EA27D107B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Ness Botanic Gardens App/Pods-Ness Botanic Gardens App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ness Botanic Gardens App/Pods-Ness Botanic Gardens App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

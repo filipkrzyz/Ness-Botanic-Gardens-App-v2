@@ -9,9 +9,14 @@
 import UIKit
 import GoogleMaps
 import CoreData
+import MaterialComponents.MaterialButtons
+import MaterialComponents.MaterialButtons_ButtonThemer
+import MaterialComponents.MDCContainedButtonThemer
+
+
 
 class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
-
+    
     // Referencing AppDelegate because it has some functions neccessary for using Core Data
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -27,7 +32,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     
     var nextMarkerID: Int = 0  // markerID
     
-    var nessButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +45,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         
         // Create camera looking at Ness Gardens
         self.camera = GMSCameraPosition.camera(withLatitude: 53.272522, longitude: -3.042988, zoom: 15.0)
-        self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        self.mapView = GMSMapView.map(withFrame: view.frame, camera: camera)
         
         // Seting compass graphic and myLocationButton which appears on the map
         mapView.settings.compassButton = true
@@ -49,7 +53,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         mapView.settings.tiltGestures = false
         mapView.delegate = self
         mapView.isMyLocationEnabled = true
-        view = mapView
+        //view = mapView
+        view.addSubview(mapView)
         
         
         
@@ -75,9 +80,18 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
                 self.showMarkers(mapView: self.mapView)
             }
         }
-        
-        
 
+        // NESS BUTTON
+        let buttonScheme = MDCButtonScheme()
+        let nessButton = MDCFloatingButton()
+        nessButton.setImage(UIImage(named: "NessLogoCircle.png")!, for: .normal)
+        MDCFloatingActionButtonThemer.applyScheme(buttonScheme, to: nessButton)
+        nessButton.frame = CGRect(x:view.frame.maxX - 66, y:view.frame.maxY - 185, width:60,height:60)
+        nessButton.setElevation(ShadowElevation(rawValue: 2), for: .normal)
+        nessButton.setElevation(ShadowElevation(rawValue: 4), for: .highlighted)
+        view.addSubview(nessButton)
+        nessButton.addTarget(self, action: #selector(self.nessButtonPressed), for: .touchUpInside)
+        
         
     }   // <-- viewDidLoad()
     
@@ -93,32 +107,19 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         // Hide the Navigation Bar
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
-        // NESS BUTTON
-        self.nessButton = UIButton(type: .custom)
-        self.nessButton.translatesAutoresizingMaskIntoConstraints = false
-        self.nessButton.backgroundColor = UIColor.white
-        self.nessButton.setImage(UIImage(named:"NessLogoCircle.png"), for: .normal)
-        self.nessButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
-        self.nessButton.addTarget(self, action: #selector(self.nessButtonPressed), for: .touchUpInside)
-        DispatchQueue.main.async {
-            if let keyWindow = UIApplication.shared.keyWindow {
-                keyWindow.addSubview(self.nessButton)
-                //self.nessButton.trailingAnchor.constraint(equalTo: self.nessButton.trailingAnchor, constant: 10).isActive = true
-                //self.nessButton.bottomAnchor.constraint(equalTo: self.nessButton.bottomAnchor, constant: 100).isActive = true
-                NSLayoutConstraint.activate([
-                    keyWindow.trailingAnchor.constraint(equalTo: self.nessButton.trailingAnchor, constant: 10),
-                    keyWindow.bottomAnchor.constraint(equalTo: self.nessButton.bottomAnchor, constant: 120),
-                    self.nessButton.widthAnchor.constraint(equalToConstant: 56),
-                    self.nessButton.heightAnchor.constraint(equalToConstant: 56)])
-            }
-            
-            self.nessButton.layer.cornerRadius = 30.0
-            self.nessButton.layer.shadowColor = graphiteGrey.cgColor
-            self.nessButton.layer.shadowOffset = CGSize(width: 0, height: 25)
-            self.nessButton.layer.shadowRadius = 30.0
-            self.nessButton.layer.shadowOpacity = 0.25
-            self.nessButton.clipsToBounds = true
-        }
+ 
+
+//        DispatchQueue.main.async {
+//            if let keyWindow = UIApplication.shared.keyWindow {
+//                keyWindow.addSubview(self.nessButton)
+//                //self.nessButton.trailingAnchor.constraint(equalTo: self.nessButton.trailingAnchor, constant: 10).isActive = true
+//                //self.nessButton.bottomAnchor.constraint(equalTo: self.nessButton.bottomAnchor, constant: 100).isActive = true
+//                NSLayoutConstraint.activate([
+//                    keyWindow.trailingAnchor.constraint(equalTo: self.nessButton.trailingAnchor, constant: 10),
+//                    keyWindow.bottomAnchor.constraint(equalTo: self.nessButton.bottomAnchor, constant: 120),
+//                    self.nessButton.widthAnchor.constraint(equalToConstant: 56),
+//                    self.nessButton.heightAnchor.constraint(equalToConstant: 56)])
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -127,12 +128,12 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         // Show the Navigation Bar
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         
-        if self.nessButton.superview != nil {
-            DispatchQueue.main.async {
-                self.nessButton.removeFromSuperview()
-                self.nessButton = UIButton()
-            }
-        }
+//        if self.nessButton.superview != nil {
+//            DispatchQueue.main.async {
+//                self.nessButton.removeFromSuperview()
+//                self.nessButton = UIButton()
+//            }
+//        }
     }
     
     

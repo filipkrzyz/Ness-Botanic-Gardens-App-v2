@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5477F4BB973E0C592A20C34B2B9DE741"
+               BlueprintIdentifier = "F519B1DEA1ABCFA4404059684736D844"
                BuildableName = "Pods_Ness_Botanic_Gardens_App.framework"
                BlueprintName = "Pods-Ness Botanic Gardens App"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5477F4BB973E0C592A20C34B2B9DE741"
+            BlueprintIdentifier = "F519B1DEA1ABCFA4404059684736D844"
             BuildableName = "Pods_Ness_Botanic_Gardens_App.framework"
             BlueprintName = "Pods-Ness Botanic Gardens App"
             ReferencedContainer = "container:Pods.xcodeproj">

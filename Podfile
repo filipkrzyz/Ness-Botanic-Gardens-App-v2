@@ -9,8 +9,9 @@ target 'Ness Botanic Gardens App' do
 
   # Pods for Ness Botanic Gardens App
 pod 'GoogleMaps'
-  pod 'GooglePlaces'
-
+pod 'GooglePlaces'
+pod 'MaterialComponents/Buttons'  
+pod 'MaterialComponents/Buttons+ButtonThemer' 
 end
 
 
