@@ -11,6 +11,7 @@
 		DC5D61AB22331739001D196F /* Ness.html in Resources */ = {isa = PBXBuildFile; fileRef = DC5D61A922331738001D196F /* Ness.html */; };
 		DC5D61AC22331739001D196F /* Ness Botanic Gardens - University of Liverpool_files in Resources */ = {isa = PBXBuildFile; fileRef = DC5D61AA22331739001D196F /* Ness Botanic Gardens - University of Liverpool_files */; };
 		DC5D61AE22345857001D196F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5D61AD22345856001D196F /* Assets.xcassets */; };
+		DC5D61B5223FFAA0001D196F /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D61B4223FFAA0001D196F /* Filter.swift */; };
 		DC61126D21DD48E500BED039 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61126C21DD48E500BED039 /* AppDelegate.swift */; };
 		DC61126F21DD48E500BED039 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61126E21DD48E500BED039 /* ViewController.swift */; };
 		DC61127221DD48E500BED039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC61127021DD48E500BED039 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		DC5D61A922331738001D196F /* Ness.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Ness.html; sourceTree = "<group>"; };
 		DC5D61AA22331739001D196F /* Ness Botanic Gardens - University of Liverpool_files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Ness Botanic Gardens - University of Liverpool_files"; sourceTree = "<group>"; };
 		DC5D61AD22345856001D196F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC5D61B4223FFAA0001D196F /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		DC61126921DD48E500BED039 /* Ness Botanic Gardens App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ness Botanic Gardens App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC61126C21DD48E500BED039 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC61126E21DD48E500BED039 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				DC62D81D22132DD4008F4D1B /* LoadingViewController.swift */,
 				DC8057ED220A575B0074D23B /* HomeViewController.swift */,
 				DC61128321DD614200BED039 /* MapViewController.swift */,
+				DC5D61B4223FFAA0001D196F /* Filter.swift */,
 				DC62D827221AE4CA008F4D1B /* SectionViewController.swift */,
 				DCE02438222F22510024DBCF /* AttractionVC.swift */,
 				DC62D829221AE51D008F4D1B /* BedViewController.swift */,
@@ -375,6 +378,7 @@
 				DC62D81C220F0334008F4D1B /* Beds+CoreDataProperties.swift in Sources */,
 				DC8057E6220A50D10074D23B /* Features+CoreDataProperties.swift in Sources */,
 				DC8057DB220A50D10074D23B /* Images+CoreDataClass.swift in Sources */,
+				DC5D61B5223FFAA0001D196F /* Filter.swift in Sources */,
 				DC61126F21DD48E500BED039 /* ViewController.swift in Sources */,
 				DCE024312221B5040024DBCF /* TrailVC.swift in Sources */,
 				DC8057EB220A50D10074D23B /* Ness_spec+CoreDataClass.swift in Sources */,

@@ -32,6 +32,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     
     var nextMarkerID: Int = 0  // markerID
     
+    var filterDict: [String: Bool] = ["featuresCheckbox": true, "attractionsCheckbox": true,"sectionsCheckbox": true, "bedsCheckbox": true]
+    
+    @IBOutlet var filterPopover: UIView!
+    @IBOutlet var grayView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +49,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         
         // Create camera looking at Ness Gardens
         self.camera = GMSCameraPosition.camera(withLatitude: 53.272522, longitude: -3.042988, zoom: 15.0)
-        self.mapView = GMSMapView.map(withFrame: view.frame, camera: camera)
+        self.mapView = GMSMapView.map(withFrame: view.layoutMarginsGuide.layoutFrame, camera: camera)
         
         // Seting compass graphic and myLocationButton which appears on the map
         mapView.settings.compassButton = true
@@ -55,6 +59,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         mapView.isMyLocationEnabled = true
         //view = mapView
         view.addSubview(mapView)
+        //mapView.translatesAutoresizingMaskIntoConstraints = false
+        //mapView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 15).isActive = true
         
         
         
@@ -86,11 +92,37 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         let nessButton = MDCFloatingButton()
         nessButton.setImage(UIImage(named: "NessLogoCircle.png")!, for: .normal)
         MDCFloatingActionButtonThemer.applyScheme(buttonScheme, to: nessButton)
-        nessButton.frame = CGRect(x:view.frame.maxX - 66, y:view.frame.maxY - 185, width:60,height:60)
-        nessButton.setElevation(ShadowElevation(rawValue: 2), for: .normal)
+        //nessButton.frame = CGRect(x:self.view.frame.maxX - 66, y:self.mapView.frame.maxY - 185, width:60,height:60)
+        nessButton.setElevation(ShadowElevation(rawValue: 1), for: .normal)
         nessButton.setElevation(ShadowElevation(rawValue: 4), for: .highlighted)
         view.addSubview(nessButton)
+        nessButton.translatesAutoresizingMaskIntoConstraints = false
+        nessButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        nessButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        nessButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -75).isActive = true
+        nessButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         nessButton.addTarget(self, action: #selector(self.nessButtonPressed), for: .touchUpInside)
+        nessButton.setBorderColor(UIColor.white, for: .normal)
+        nessButton.setBorderWidth(0.0, for: .normal)
+        
+        // FILTER BUTTON
+        let filterButton = MDCButton()
+        MDCContainedButtonThemer.applyScheme(buttonScheme, to: filterButton)
+        //filterButton.frame = CGRect(x:mapView.frame.midX - 60, y:mapView.frame.maxY - 105, width:120,height:40)
+        filterButton.setTitle("Filter", for: .normal)
+        filterButton.setTitleColor(graphiteGrey, for: .normal)
+        filterButton.setBackgroundColor(UIColor.white, for: .normal)
+        filterButton.setTitleColor(UIColor.white, for: .highlighted)
+        filterButton.setBackgroundColor(graphiteGrey, for: .highlighted)
+        filterButton.setElevation(ShadowElevation(rawValue: 2), for: .normal)
+        filterButton.setElevation(ShadowElevation(rawValue: 4), for: .highlighted)
+        view.addSubview(filterButton)
+        filterButton.translatesAutoresizingMaskIntoConstraints = false
+        filterButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        filterButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        filterButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -10).isActive = true
+        filterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
+        filterButton.addTarget(self, action: #selector(self.filterButtonPressed), for: .touchUpInside)
         
         
     }   // <-- viewDidLoad()
@@ -101,25 +133,40 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         self.mapView.animate(to: self.camera)
     }
     
+    @objc func filterButtonPressed() {
+        print("filter button pressed")
+        self.view.addSubview(self.grayView)
+        self.grayView.frame = self.view.frame
+        //self.grayView.center = self.view.center
+        self.view.addSubview(self.filterPopover)
+        self.filterPopover.center = self.view.center
+    }
+    
+    
+    @IBAction func checkboxTapped(_ sender: UIButton) {
+        print(sender.accessibilityIdentifier ?? "Identifier")
+        if sender.isSelected {
+            sender.isSelected = false
+            self.filterDict[sender.accessibilityIdentifier!] = false
+        } else {
+            sender.isSelected = true
+            self.filterDict[sender.accessibilityIdentifier!] = true
+        }
+        print(self.filterDict)
+    }
+    
+    @IBAction func submitFilter(_ sender: Any) {
+        self.filterPopover.removeFromSuperview()
+        self.grayView.removeFromSuperview()
+        self.showMarkers(mapView: mapView)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Hide the Navigation Bar
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
- 
-
-//        DispatchQueue.main.async {
-//            if let keyWindow = UIApplication.shared.keyWindow {
-//                keyWindow.addSubview(self.nessButton)
-//                //self.nessButton.trailingAnchor.constraint(equalTo: self.nessButton.trailingAnchor, constant: 10).isActive = true
-//                //self.nessButton.bottomAnchor.constraint(equalTo: self.nessButton.bottomAnchor, constant: 100).isActive = true
-//                NSLayoutConstraint.activate([
-//                    keyWindow.trailingAnchor.constraint(equalTo: self.nessButton.trailingAnchor, constant: 10),
-//                    keyWindow.bottomAnchor.constraint(equalTo: self.nessButton.bottomAnchor, constant: 120),
-//                    self.nessButton.widthAnchor.constraint(equalToConstant: 56),
-//                    self.nessButton.heightAnchor.constraint(equalToConstant: 56)])
-
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -127,13 +174,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         
         // Show the Navigation Bar
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
-        
-//        if self.nessButton.superview != nil {
-//            DispatchQueue.main.async {
-//                self.nessButton.removeFromSuperview()
-//                self.nessButton = UIButton()
-//            }
-//        }
+       
     }
     
     
@@ -184,25 +225,25 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             
             switch (marker.entityName) {
             case "Beds":
-                if mapView.camera.zoom >= 18 {
+                if mapView.camera.zoom >= 18 && self.filterDict["bedsCheckbox"] == true {
                     self.markersMutableDict[id]?.marker?.map = mapView
                 } else {
                     self.markersMutableDict[id]?.marker?.map = nil
                 }
             case "Attractions":
-                if mapView.camera.zoom >= 16 {
+                if mapView.camera.zoom >= 16 && self.filterDict["attractionsCheckbox"] == true {
                     self.markersMutableDict[id]?.marker?.map = mapView
                 } else {
                     self.markersMutableDict[id]?.marker?.map = nil
                 }
             case "Features":
-                if mapView.camera.zoom >= 15 {
+                if mapView.camera.zoom >= 15 && self.filterDict["featuresCheckbox"] == true {
                     self.markersMutableDict[id]?.marker?.map = mapView
                 } else {
                     self.markersMutableDict[id]?.marker?.map = nil
                 }
             case "Garden_sections":
-                if mapView.camera.zoom >= 16 {
+                if mapView.camera.zoom >= 16 && self.filterDict["sectionsCheckbox"] == true {
                     self.markersMutableDict[id]?.marker?.map = mapView
                 } else {
                     self.markersMutableDict[id]?.marker?.map = nil

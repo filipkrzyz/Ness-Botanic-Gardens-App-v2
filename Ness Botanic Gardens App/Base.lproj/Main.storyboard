@@ -110,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRA-90-QAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3402.898550724638" y="1163.1696428571429"/>
+            <point key="canvasLocation" x="3403" y="1665"/>
         </scene>
         <!--PointVC-->
         <scene sceneID="tPa-Mb-fA0">
@@ -152,11 +152,144 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcW-KK-88Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2581.5999999999999" y="2144.9775112443781"/>
+            <point key="canvasLocation" x="2586" y="2516"/>
         </scene>
         <!--Trail MapVC-->
         <scene sceneID="aSE-Qw-Ogi">
             <objects>
+                <view contentMode="scaleToFill" id="uv5-Nl-21i" userLabel="grayView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="0.70071703770000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="47a-8A-ak7"/>
+                </view>
+                <view contentMode="scaleToFill" id="iyQ-pa-g9z" userLabel="Popover">
+                    <rect key="frame" x="0.0" y="0.0" width="216" height="210"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Features" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UA1-fS-XR5">
+                            <rect key="frame" x="20" y="20" width="67" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attractions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knd-bX-spw">
+                            <rect key="frame" x="20" y="60" width="84" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I8-ro-E0t" userLabel="featuresCheckbox">
+                            <rect key="frame" x="166" y="10" width="40" height="40"/>
+                            <accessibility key="accessibilityConfiguration" identifier="featuresCheckbox"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="8tw-K8-ul4"/>
+                                <constraint firstAttribute="height" constant="40" id="oHP-Cs-L2h"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" title="Button" image="unchecked_checkbox"/>
+                            <state key="selected" image="checked_checkbox"/>
+                            <connections>
+                                <action selector="checkboxTapped:" destination="G01-Lc-y7v" eventType="touchUpInside" id="D3t-Gu-fyY"/>
+                                <action selector="checkboxTapped:" destination="nSb-Ch-O6h" eventType="touchUpInside" id="iug-F6-dGh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuJ-XV-FC3" userLabel="attractionsCheckbox">
+                            <rect key="frame" x="166" y="50" width="40" height="40"/>
+                            <accessibility key="accessibilityConfiguration" identifier="attractionsCheckbox"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="9Xy-OX-vg7"/>
+                                <constraint firstAttribute="width" constant="40" id="gWg-Os-h1X"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" title="Button" image="unchecked_checkbox"/>
+                            <state key="selected" image="checked_checkbox"/>
+                            <connections>
+                                <action selector="checkboxTapped:" destination="G01-Lc-y7v" eventType="touchUpInside" id="36h-Wa-TJN"/>
+                                <action selector="checkboxTapped:" destination="nSb-Ch-O6h" eventType="touchUpInside" id="YkL-WK-9dU"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALa-tS-5Yn">
+                            <rect key="frame" x="20" y="140" width="39" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4b-0f-dVf" userLabel="bedsCheckbox">
+                            <rect key="frame" x="166" y="130" width="40" height="40"/>
+                            <accessibility key="accessibilityConfiguration" identifier="bedsCheckbox"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Tl0-HF-Nx9"/>
+                                <constraint firstAttribute="height" constant="40" id="jWT-li-XB8"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" title="Button" image="unchecked_checkbox"/>
+                            <state key="selected" image="checked_checkbox"/>
+                            <connections>
+                                <action selector="checkboxTapped:" destination="G01-Lc-y7v" eventType="touchUpInside" id="FiD-Gm-myL"/>
+                                <action selector="checkboxTapped:" destination="nSb-Ch-O6h" eventType="touchUpInside" id="v9F-kn-2bU"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjB-8q-GY5">
+                            <rect key="frame" x="20" y="100" width="67" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcm-R6-8yD" userLabel="sectionsCheckbox">
+                            <rect key="frame" x="166" y="90" width="40" height="40"/>
+                            <accessibility key="accessibilityConfiguration" identifier="sectionsCheckbox"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="F8f-TT-uhq"/>
+                                <constraint firstAttribute="height" constant="40" id="FP5-gg-imO"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" title="Button" image="unchecked_checkbox"/>
+                            <state key="selected" image="checked_checkbox"/>
+                            <connections>
+                                <action selector="checkboxTapped:" destination="nSb-Ch-O6h" eventType="touchUpInside" id="hts-zu-hph"/>
+                                <action selector="checkboxTapped:" destination="G01-Lc-y7v" eventType="touchUpInside" id="zkH-xW-Vdh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCY-pC-xfv">
+                            <rect key="frame" x="53" y="170" width="110" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="Wbj-lM-dah"/>
+                            </constraints>
+                            <state key="normal" title="Submit">
+                                <color key="titleColor" red="0.01176470588" green="0.1215686275" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="submitFilter:" destination="nSb-Ch-O6h" eventType="touchUpInside" id="0ey-DD-efM"/>
+                                <action selector="submitFilter:" destination="G01-Lc-y7v" eventType="touchUpInside" id="EEa-1j-edL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="0I8-ro-E0t" firstAttribute="centerY" secondItem="UA1-fS-XR5" secondAttribute="centerY" id="1IE-Ho-yoW"/>
+                        <constraint firstItem="ACx-Jm-SN9" firstAttribute="bottom" secondItem="UCY-pC-xfv" secondAttribute="bottom" constant="10" id="39k-Fa-11U"/>
+                        <constraint firstItem="Knd-bX-spw" firstAttribute="leading" secondItem="UA1-fS-XR5" secondAttribute="leading" id="3Uy-Cr-kRT"/>
+                        <constraint firstItem="ALa-tS-5Yn" firstAttribute="leading" secondItem="UA1-fS-XR5" secondAttribute="leading" id="8wm-UZ-Zki"/>
+                        <constraint firstItem="TuJ-XV-FC3" firstAttribute="centerY" secondItem="Knd-bX-spw" secondAttribute="centerY" id="A88-ex-uWd"/>
+                        <constraint firstItem="Knd-bX-spw" firstAttribute="top" secondItem="UA1-fS-XR5" secondAttribute="bottom" constant="20" id="E6D-kw-BtU"/>
+                        <constraint firstItem="NjB-8q-GY5" firstAttribute="top" secondItem="Knd-bX-spw" secondAttribute="bottom" constant="20" id="GpN-50-wHQ"/>
+                        <constraint firstItem="Mcm-R6-8yD" firstAttribute="centerY" secondItem="NjB-8q-GY5" secondAttribute="centerY" id="Hku-Mb-VaM"/>
+                        <constraint firstItem="Mcm-R6-8yD" firstAttribute="trailing" secondItem="0I8-ro-E0t" secondAttribute="trailing" id="LbX-gV-iHI"/>
+                        <constraint firstItem="UA1-fS-XR5" firstAttribute="top" secondItem="ACx-Jm-SN9" secondAttribute="top" constant="20" id="ZeW-ww-tsI"/>
+                        <constraint firstItem="ALa-tS-5Yn" firstAttribute="top" secondItem="NjB-8q-GY5" secondAttribute="bottom" constant="20" id="Zrm-BF-smA"/>
+                        <constraint firstItem="O4b-0f-dVf" firstAttribute="trailing" secondItem="0I8-ro-E0t" secondAttribute="trailing" id="bQh-CX-qOf"/>
+                        <constraint firstItem="UCY-pC-xfv" firstAttribute="top" secondItem="ALa-tS-5Yn" secondAttribute="bottom" constant="10" id="g5t-zU-Cbg"/>
+                        <constraint firstItem="O4b-0f-dVf" firstAttribute="centerY" secondItem="ALa-tS-5Yn" secondAttribute="centerY" id="hNK-36-3cQ"/>
+                        <constraint firstItem="UA1-fS-XR5" firstAttribute="leading" secondItem="ACx-Jm-SN9" secondAttribute="leading" constant="20" id="igl-Id-8lQ"/>
+                        <constraint firstItem="UCY-pC-xfv" firstAttribute="centerX" secondItem="iyQ-pa-g9z" secondAttribute="centerX" id="la0-Qb-0Ip"/>
+                        <constraint firstItem="TuJ-XV-FC3" firstAttribute="trailing" secondItem="0I8-ro-E0t" secondAttribute="trailing" id="v2f-Cj-vmN"/>
+                        <constraint firstItem="ACx-Jm-SN9" firstAttribute="trailing" secondItem="0I8-ro-E0t" secondAttribute="trailing" constant="10" id="wWP-dp-OZR"/>
+                        <constraint firstItem="NjB-8q-GY5" firstAttribute="leading" secondItem="UA1-fS-XR5" secondAttribute="leading" id="xwD-ff-4RT"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="ACx-Jm-SN9"/>
+                </view>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yvT-LQ-aTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="G01-Lc-y7v" customClass="TrailMapVC" customModule="Ness_Botanic_Gardens_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ywx-cF-4NZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -165,15 +298,16 @@
                         <viewLayoutGuide key="safeArea" id="S4C-gF-tF6"/>
                     </view>
                     <connections>
+                        <outlet property="filterPopover" destination="iyQ-pa-g9z" id="0Aj-f4-DHQ"/>
+                        <outlet property="grayView" destination="uv5-Nl-21i" id="u2M-JF-Dra"/>
                         <segue destination="leR-Vz-toy" kind="show" identifier="bedSegue" id="umG-ve-D9Z"/>
                         <segue destination="2gs-C9-lA3" kind="show" identifier="sectionSegue" id="K2E-s9-ued"/>
                         <segue destination="9pQ-J7-UnN" kind="show" identifier="pointSegue" id="WRs-s0-nQb"/>
                         <segue destination="eTZ-a7-xbc" kind="show" identifier="attractionSegue" id="TSM-wC-pTj"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yvT-LQ-aTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2583" y="1164"/>
+            <point key="canvasLocation" x="2586" y="1665"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="cdy-rM-oQg">
@@ -187,14 +321,143 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="TS0-c3-9xv"/>
                     <connections>
+                        <outlet property="filterPopover" destination="geY-tK-bl9" id="0BQ-6s-FE9"/>
+                        <outlet property="grayView" destination="zCb-gt-vUB" id="MPu-Um-t1l"/>
                         <segue destination="2gs-C9-lA3" kind="show" identifier="sectionSegue" id="DkT-xX-iFW"/>
                         <segue destination="leR-Vz-toy" kind="show" identifier="bedSegue" id="g1h-SZ-f71"/>
                         <segue destination="eTZ-a7-xbc" kind="show" identifier="attractionSegue" id="o7r-e9-Mav"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5R-09-4wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="zCb-gt-vUB" userLabel="grayView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.70071703767123283" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="9Lf-QT-DXG"/>
+                </view>
+                <view contentMode="scaleToFill" id="geY-tK-bl9" userLabel="Popover">
+                    <rect key="frame" x="0.0" y="0.0" width="216" height="210"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Features" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VA3-gk-cBK">
+                            <rect key="frame" x="20" y="20" width="67" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attractions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVr-BS-O5M">
+                            <rect key="frame" x="20" y="60" width="84" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIt-Uo-8lv" userLabel="featuresCheckbox">
+                            <rect key="frame" x="166" y="10" width="40" height="40"/>
+                            <accessibility key="accessibilityConfiguration" identifier="featuresCheckbox"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="hdl-I9-DNe"/>
+                                <constraint firstAttribute="height" constant="40" id="k2L-k5-VbU"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" title="Button" image="unchecked_checkbox"/>
+                            <state key="selected" image="checked_checkbox"/>
+                            <connections>
+                                <action selector="checkboxTapped:" destination="nSb-Ch-O6h" eventType="touchUpInside" id="nt9-hJ-43K"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffv-NM-6DW" userLabel="attractionsCheckbox">
+                            <rect key="frame" x="166" y="50" width="40" height="40"/>
+                            <accessibility key="accessibilityConfiguration" identifier="attractionsCheckbox"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="39W-35-TBp"/>
+                                <constraint firstAttribute="width" constant="40" id="YEg-TY-XPq"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" title="Button" image="unchecked_checkbox"/>
+                            <state key="selected" image="checked_checkbox"/>
+                            <connections>
+                                <action selector="checkboxTapped:" destination="nSb-Ch-O6h" eventType="touchUpInside" id="sWA-SR-Zbr"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFh-ua-f9z">
+                            <rect key="frame" x="20" y="140" width="39" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eC-OA-Jtj" userLabel="bedsCheckbox">
+                            <rect key="frame" x="166" y="130" width="40" height="40"/>
+                            <accessibility key="accessibilityConfiguration" identifier="bedsCheckbox"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="9If-Sl-4zD"/>
+                                <constraint firstAttribute="width" constant="40" id="bhU-tj-aoC"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" title="Button" image="unchecked_checkbox"/>
+                            <state key="selected" image="checked_checkbox"/>
+                            <connections>
+                                <action selector="checkboxTapped:" destination="nSb-Ch-O6h" eventType="touchUpInside" id="ndP-Ve-hZ9"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyO-gH-h3r">
+                            <rect key="frame" x="20" y="100" width="67" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAs-lL-bCG" userLabel="sectionsCheckbox">
+                            <rect key="frame" x="166" y="90" width="40" height="40"/>
+                            <accessibility key="accessibilityConfiguration" identifier="sectionsCheckbox"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="sYC-XT-Yw4"/>
+                                <constraint firstAttribute="height" constant="40" id="yYw-sa-WcR"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" title="Button" image="unchecked_checkbox"/>
+                            <state key="selected" image="checked_checkbox"/>
+                            <connections>
+                                <action selector="checkboxTapped:" destination="nSb-Ch-O6h" eventType="touchUpInside" id="yaO-ig-eUT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pK-jU-lMn">
+                            <rect key="frame" x="53" y="170" width="110" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="jL7-J7-Y0x"/>
+                            </constraints>
+                            <state key="normal" title="Submit">
+                                <color key="titleColor" red="0.01176470588" green="0.1215686275" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="submitFilter:" destination="nSb-Ch-O6h" eventType="touchUpInside" id="GSb-kd-kzX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="eIt-Uo-8lv" firstAttribute="centerY" secondItem="VA3-gk-cBK" secondAttribute="centerY" id="1EK-Mx-QfW"/>
+                        <constraint firstItem="WFh-ua-f9z" firstAttribute="top" secondItem="WyO-gH-h3r" secondAttribute="bottom" constant="20" id="4fR-3Y-ZIV"/>
+                        <constraint firstItem="1eC-OA-Jtj" firstAttribute="centerY" secondItem="WFh-ua-f9z" secondAttribute="centerY" id="8Kp-ax-XOM"/>
+                        <constraint firstItem="Ffv-NM-6DW" firstAttribute="trailing" secondItem="eIt-Uo-8lv" secondAttribute="trailing" id="Ihx-Jc-UTa"/>
+                        <constraint firstItem="WFh-ua-f9z" firstAttribute="leading" secondItem="VA3-gk-cBK" secondAttribute="leading" id="Tyy-OZ-s5P"/>
+                        <constraint firstItem="WyO-gH-h3r" firstAttribute="leading" secondItem="VA3-gk-cBK" secondAttribute="leading" id="buJ-gX-vHq"/>
+                        <constraint firstItem="1eC-OA-Jtj" firstAttribute="trailing" secondItem="eIt-Uo-8lv" secondAttribute="trailing" id="eAh-uV-RW1"/>
+                        <constraint firstItem="KAs-lL-bCG" firstAttribute="trailing" secondItem="eIt-Uo-8lv" secondAttribute="trailing" id="fjX-vX-BsB"/>
+                        <constraint firstItem="HVr-BS-O5M" firstAttribute="top" secondItem="VA3-gk-cBK" secondAttribute="bottom" constant="20" id="kW6-NY-XPo"/>
+                        <constraint firstItem="VA3-gk-cBK" firstAttribute="top" secondItem="tfs-ux-QRC" secondAttribute="top" constant="20" id="mOj-zE-8Vj"/>
+                        <constraint firstItem="7pK-jU-lMn" firstAttribute="top" secondItem="WFh-ua-f9z" secondAttribute="bottom" constant="10" id="q2z-uM-CnI"/>
+                        <constraint firstItem="Ffv-NM-6DW" firstAttribute="centerY" secondItem="HVr-BS-O5M" secondAttribute="centerY" id="qQI-h8-QWI"/>
+                        <constraint firstItem="HVr-BS-O5M" firstAttribute="leading" secondItem="VA3-gk-cBK" secondAttribute="leading" id="qwi-qg-h2F"/>
+                        <constraint firstItem="tfs-ux-QRC" firstAttribute="trailing" secondItem="eIt-Uo-8lv" secondAttribute="trailing" constant="10" id="tHX-AE-C3W"/>
+                        <constraint firstItem="tfs-ux-QRC" firstAttribute="bottom" secondItem="7pK-jU-lMn" secondAttribute="bottom" constant="10" id="tb9-Be-pZz"/>
+                        <constraint firstItem="7pK-jU-lMn" firstAttribute="centerX" secondItem="geY-tK-bl9" secondAttribute="centerX" id="thr-OG-6rf"/>
+                        <constraint firstItem="KAs-lL-bCG" firstAttribute="centerY" secondItem="WyO-gH-h3r" secondAttribute="centerY" id="vvx-FL-CP8"/>
+                        <constraint firstItem="VA3-gk-cBK" firstAttribute="leading" secondItem="tfs-ux-QRC" secondAttribute="leading" constant="20" id="wN6-Gs-FHy"/>
+                        <constraint firstItem="WyO-gH-h3r" firstAttribute="top" secondItem="HVr-BS-O5M" secondAttribute="bottom" constant="20" id="yb6-5j-BHB"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="tfs-ux-QRC"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="661.875" y="309.50704225352115"/>
+            <point key="canvasLocation" x="1341" y="308"/>
         </scene>
         <!--AttractionVC-->
         <scene sceneID="OVd-TZ-gAs">
@@ -237,7 +500,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQ7-64-FE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1025" y="1164"/>
+            <point key="canvasLocation" x="-1037" y="1665"/>
         </scene>
         <!--Section View Controller-->
         <scene sceneID="g2P-hB-go7">
@@ -279,7 +542,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eyt-Rb-PYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-143.19999999999999" y="1163.568215892054"/>
+            <point key="canvasLocation" x="-156" y="1665"/>
         </scene>
         <!--Bed View Controller-->
         <scene sceneID="w2H-zg-Xfd">
@@ -336,7 +599,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Te6-3z-058" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660.86956521739137" y="1163.1696428571429"/>
+            <point key="canvasLocation" x="651" y="1665"/>
         </scene>
         <!--PlantVC-->
         <scene sceneID="hkq-eK-MjB">
@@ -378,7 +641,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLS-Zu-iYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1461.5999999999999" y="1163.568215892054"/>
+            <point key="canvasLocation" x="1451" y="1665"/>
         </scene>
         <!--Home-->
         <scene sceneID="bkA-Jx-7EH">
@@ -560,9 +823,11 @@
     <resources>
         <image name="NessLogoBlue" width="479.78182983398438" height="285.05453491210938"/>
         <image name="UoL_Logo_CMYK" width="568" height="146"/>
+        <image name="checked_checkbox" width="154.28572082519531" height="154.28572082519531"/>
         <image name="home" width="37.5" height="37.5"/>
         <image name="map" width="37.5" height="37.5"/>
         <image name="trails" width="37.5" height="37.5"/>
+        <image name="unchecked_checkbox" width="154.28572082519531" height="154.28572082519531"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="g1h-SZ-f71"/>
