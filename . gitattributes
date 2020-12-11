@@ -1,3 +1,5 @@
 * linguist-vendored
-*.swift linguist-vendored=true
-*.js linguist-vendored=false
+*.js linguist-language=swift
+*.html linguist-language=swift
+*.css linguist-language=swift
+*.php linguist-language=swift
